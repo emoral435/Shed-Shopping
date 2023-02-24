@@ -1,18 +1,16 @@
 import { Routes, Route, Link } from "react-router-dom"
-import Home from "./Home"
-import BuyTickets from "./BuyTickets"
+import Home from "./view/./Home"
+import BuyTickets from "./view/BuyTickets"
+import Nav from "./components/buttons/Nav/Nav"
 
 function App() {
 
   return (
     <div>
-      <li><Link to="/tickets">Buy Tickets</Link></li>
-      <li><Link to="/">Homepage</Link></li>
-      <li><Link to="/test">Test</Link></li>
+      <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tickets" element={<BuyTickets />} />
-        <Route path="/test" element={<div>This somehow works</div>} />
       </Routes>
     </div>
   )
