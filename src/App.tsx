@@ -8,9 +8,11 @@ function App() {
     <div>
       <li><Link to="/tickets">Buy Tickets</Link></li>
       <li><Link to="/">Homepage</Link></li>
+      <li><Link to="/test">Test</Link></li>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tickets" element={<BuyTickets />} />
+        <Route path="/test" element={<div>This somehow works</div>} />
       </Routes>
     </div>
   )
