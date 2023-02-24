@@ -41,8 +41,8 @@
 ## About The Project
 
 <span style="display: flex; justify-content: space-around;">
-<img src="docs/screenshot.png" alt="Logo" width="450">
-<img src="docs/screenshot2.png" alt="Logo" width="450">
+<img src="docs/screenshot.png" alt="Logo" width="450"> // screenshot
+<img src="docs/screenshot2.png" alt="Logo" width="450"> // screenshot
 </span>
 
 Here's what you can find:
