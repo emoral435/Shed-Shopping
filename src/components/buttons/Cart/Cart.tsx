@@ -1,7 +1,7 @@
 import svgCart from '/src/assets/cart.svg'
 import { motion } from 'framer-motion'
 interface cartProps {
-    text: string,
+    text: number,
 }
 
 export default function Cart(props: cartProps) {

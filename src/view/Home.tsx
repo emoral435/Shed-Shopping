@@ -11,7 +11,6 @@ const containerVariants = {
         transition: { delay: .1, duration: .1}
     },
     exit: {
-        y: '100vh',
         opacity: .5,
         transition: {ease: 'easeInOut' }
     }
