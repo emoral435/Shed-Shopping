@@ -4,7 +4,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      scale: {
+        'flip-horizontal': {
+          '--transform-scale-x': '-1',
+        },
+      }
+    },
   },
   plugins: [],
 }
