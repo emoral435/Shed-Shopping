@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
-import homepageImg from '/src/assets/homepage.webp'
+import homepageImg from '/src/assets/jellyfish.jpeg'
+import HomePage from "../components/buttons/HomePage/HomePage"
 
 const containerVariants = {
     hidden: {
@@ -19,10 +20,14 @@ const containerVariants = {
 
 export default function Home() {
     return (
-        <motion.div variants={containerVariants} initial="hidden" animate="visible" exit="exit" className="h-[130vh]" >
+        <motion.div variants={containerVariants} initial="hidden" animate="visible" exit="exit" className="h-[100vh]" >
             <img src={homepageImg} alt="turtle bg image" className="w-full h-full absolute z-[-10]"/>
-            
-            <h1 className="text-5xl">Home Page</h1>
+            <div className="flex flex-col">
+                <div className="basis-[4rem]"></div>
+                <div className="basis-[50rem]">
+                    <HomePage />
+                </div>
+            </div>
         </motion.div>
     )
 }

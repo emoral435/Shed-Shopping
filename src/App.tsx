@@ -4,13 +4,12 @@ import BuyTickets from "./view/BuyTickets"
 import Nav from "./components/buttons/Nav/Nav"
 import { motion, AnimatePresence } from "framer-motion"
 import { useLocation } from "react-router-dom"
-import Cart from "./components/buttons/Cart/Cart"
 
 function App() {
   const location = useLocation();
 
   return (
-    <motion.div initial={{ opacity: 0}} animate={{ opacity: 1}} className="relative overflow-visible">
+    <motion.div initial={{ opacity: 0}} animate={{ opacity: 1}} className="relative overflow-visible font-['Seaweed']">
         <Nav />
       <AnimatePresence>
         <Routes location={location} key={location.key}>
