@@ -9,8 +9,8 @@ function App() {
   const location = useLocation();
 
   return (
-    <motion.div initial={{ opacity: 0}} animate={{ opacity: 1}}>
-      <Nav />
+    <motion.div initial={{ opacity: 0}} animate={{ opacity: 1}} className="relative">
+        <Nav />
       <AnimatePresence>
         <Routes location={location} key={location.key}>
           <Route path="/" element={<Home />} />
