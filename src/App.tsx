@@ -4,6 +4,7 @@ import BuyTickets from "./view/BuyTickets"
 import Nav from "./components/buttons/Nav/Nav"
 import { motion, AnimatePresence } from "framer-motion"
 import { useLocation } from "react-router-dom"
+import gh from "/src/assets/gh.png"
 
 function App() {
   const location = useLocation();
@@ -14,9 +15,10 @@ function App() {
       <AnimatePresence>
         <Routes location={location} key={location.key}>
           <Route path="/" element={<Home />} />
-          <Route path="/tickets" element={<BuyTickets />} />
+          <Route path="/tickets/*" element={<BuyTickets />} />
         </Routes>
       </AnimatePresence>
+      <div className="w-full h-16 bg-black flex justify-center items-center gap-8 opacity-80"><div className="text-white">curated by emoral435 🌙 </div><motion.button whileHover={{rotate: 360, scale: 1.2}} transition={{duration: 1, delay: .1}}><a href="https://github.com/emoral435" target={"_blank"}><img src={gh} className="w-12 h-12"/></a></motion.button></div>
     </motion.div>
   )
 }

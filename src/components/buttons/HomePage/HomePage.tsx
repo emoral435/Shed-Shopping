@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 export default function HomePage() {
     return (
-        <div className="absolute bottom-12 left-12 w-[60%]">
+        <div className="absolute bottom-24 left-12 w-[60%]">
             <div className="flex flex-col gap-4">
                 <h1 className="text-7xl text-[#ffcd3e] font-bold">Look nature in the eye</h1>
                 <h1 className="text-4xl text-white font-bold">Discover the wonder of the aquatic animal world. Advance timed ticket purchase is required.</h1>

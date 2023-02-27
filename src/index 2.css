@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Seaweed';
+    src: url('./LostFish-5DOz.ttf') format('ttf');
+}
+
+#cart {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
