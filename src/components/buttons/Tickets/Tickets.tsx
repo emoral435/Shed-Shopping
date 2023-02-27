@@ -5,7 +5,7 @@ interface ticketProps {
     imgUrl: string,
     link: string,
     ticketType: string,
-    price: string,
+    price: number,
 }
 
 export default function Ticket(props: ticketProps) {
@@ -14,7 +14,7 @@ export default function Ticket(props: ticketProps) {
             <Link to={props.link} className="box-border">
                 <img src={props.imgUrl} alt={props.ticketType} className="h-[150px] w-[150px] sm:h-[300px] sm:w-[300px]"/>
                 <div className="text-3xl">{props.ticketType}</div>
-                <div className="text-xl">{props.price}</div>
+                <div className="text-xl">${props.price}</div>
             </Link>
         </motion.button>    
     )
