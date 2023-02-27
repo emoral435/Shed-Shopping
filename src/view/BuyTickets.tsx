@@ -19,11 +19,11 @@ const containerVariants = {
 
 export default function BuyTickets() {
     return (
-        <motion.div variants={containerVariants} initial="hidden" animate="visible" exit="exit" className="h-full bg-[#013265]"> 
+        <motion.div variants={containerVariants} initial="hidden" animate="visible" exit="exit" className="h-full bg-[#d3d3d3]"> 
             <div className="flex flex-col">
                 <div className="basis-[6rem]"></div>
                 <div className="basis-[100%] z-[1] flex flex-col justify-start items-center gap-12">
-                    <h1 className="underline text-5xl text-[#ffcd3e] select-none ml-12">SHOP TICKETS</h1>
+                    <h1 className="underline text-5xl text-[#013265] select-none ml-12">SHOP TICKETS</h1>
                     <AnimatePresence>
                         <Routes>
                             <Route path="/" element={<ShowTickets/>} />
