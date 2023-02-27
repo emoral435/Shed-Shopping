@@ -11,11 +11,7 @@ export default function Nav() {
                     <NavButtons text="Shed Aquarium" link="/"/>
                     <NavButtons text="Buy Tickets" link="/tickets"/>
             </motion.div>
-            <div className="fixed w-full h-full z-[-1]">
-                <div className="absolute top-[4.5rem] right-2">
-                     <Cart text={1}/>
-                </div>
-            </div>
+            <Cart text={1}/>
         </nav>
     )
 }
