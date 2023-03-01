@@ -15,30 +15,33 @@ const containerVariants = {
     },
 }
 
+interface Props {
+    checkout: any
+}
 
 
-export default function BuyTickets() {
+export default function BuyTickets({ checkout } :Props) {
     return (
         <motion.div variants={containerVariants} initial="hidden" animate="visible" exit="exit" className="h-full bg-[#d3d3d3]"> 
             <div className="flex flex-col">
                 <div className="basis-[6rem]"></div>
-                <div className="basis-[100%] z-[1] flex flex-col justify-start items-center gap-12">
+                <div className="basis-[100%] flex flex-col justify-start items-center gap-12">
                     <h1 className="underline text-5xl text-[#013265] select-none ml-12">SHOP TICKETS</h1>
                     <AnimatePresence>
                         <Routes>
                             <Route path="/" element={<ShowTickets/>} />
-                            <Route path="/adult" element={<CheckTicket id={0} />} />
-                            <Route path="/baby" element={<CheckTicket id={1} />} />
-                            <Route path="/child" element={<CheckTicket id={2} />} />
-                            <Route path="/crab" element={<CheckTicket id={3} />} />
-                            <Route path="/dolphin" element={<CheckTicket id={4} />} />
-                            <Route path="/fish" element={<CheckTicket id={5} />} />
-                            <Route path="/frogs" element={<CheckTicket id={6} />} />
-                            <Route path="/jellyfish" element={<CheckTicket id={7} />} />
-                            <Route path="/penguin" element={<CheckTicket id={8} />} />
-                            <Route path="/polarbear" element={<CheckTicket id={9} />} />
-                            <Route path="/shark" element={<CheckTicket id={10} />} />
-                            <Route path="/turtle" element={<CheckTicket id={11} />} />
+                            <Route path="/adult" element={<CheckTicket checkout={checkout} id={0} />} />
+                            <Route path="/baby" element={<CheckTicket checkout={checkout} id={1} />} />
+                            <Route path="/child" element={<CheckTicket checkout={checkout} id={2} />} />
+                            <Route path="/crab" element={<CheckTicket checkout={checkout} id={3} />} />
+                            <Route path="/dolphin" element={<CheckTicket checkout={checkout} id={4} />} />
+                            <Route path="/fish" element={<CheckTicket checkout={checkout} id={5} />} />
+                            <Route path="/frogs" element={<CheckTicket checkout={checkout} id={6} />} />
+                            <Route path="/jellyfish" element={<CheckTicket checkout={checkout} id={7} />} />
+                            <Route path="/penguin" element={<CheckTicket checkout={checkout} id={8} />} />
+                            <Route path="/polarbear" element={<CheckTicket checkout={checkout} id={9} />} />
+                            <Route path="/shark" element={<CheckTicket checkout={checkout} id={10} />} />
+                            <Route path="/turtle" element={<CheckTicket checkout={checkout} id={11} />} />
                         </Routes>
                     </AnimatePresence>
                 </div>

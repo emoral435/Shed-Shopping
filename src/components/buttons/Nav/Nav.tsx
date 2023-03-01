@@ -3,7 +3,12 @@ import penguin from '/src/assets/penguin.svg'
 import { motion } from "framer-motion"
 import Cart from "../Cart/Cart"
 
-export default function Nav() {
+interface Props {
+    checkout: any,
+    total: number
+}
+
+export default function Nav({ checkout, total } : Props) {
     return (
         <nav className="h-16 w-full bg-[#131921] opacity-80 flex justify-between items-center absolute">
             <motion.div animate={{ y: 0 }} initial={{ y:-250 }} transition={{ delay: .5}} className="ml-8 flex">
@@ -11,7 +16,7 @@ export default function Nav() {
                     <NavButtons text="Shed Aquarium" link="/"/>
                     <NavButtons text="Buy Tickets" link="/tickets"/>
             </motion.div>
-            <Cart text={1}/>
+            <Cart checkout={checkout} text={total}/>
         </nav>
     )
 }
