@@ -12,7 +12,7 @@ function getTotalCost() {
     for (let i = 0; i < ticketInfo.length; i++) {
         if (ticketInfo[i].total > 0) total += ticketInfo[i].total * ticketInfo[i].price
     }
-    return total
+    return total.toFixed(2)
 }
 
 function getTotalTickets() {

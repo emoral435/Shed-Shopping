@@ -4,7 +4,8 @@ import { motion } from "framer-motion"
 
 interface propsInterface {
     id: number,
-    checkout: any
+    checkout: any,
+    changeTotal: any
 }
 
 export default function CheckTicket(props: propsInterface) {
@@ -15,6 +16,7 @@ export default function CheckTicket(props: propsInterface) {
 
     const addCheckout = () => {
         ticketInfo[props.id].total += 1
+        props.changeTotal()
         props.checkout()
     }
 
