@@ -15,7 +15,8 @@ export default function CheckTicket(props: propsInterface) {
     }
 
     const addCheckout = () => {
-        ticketInfo[props.id].total += 1
+        ticketInfo[props.id].total = ticketInfo[props.id].total +  1
+        console.log(ticketInfo[props.id].total)
         props.changeTotal()
         props.checkout()
     }

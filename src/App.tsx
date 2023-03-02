@@ -23,7 +23,7 @@ function App() {
   }
 
   const changeTotal = () => {
-    setTotalTickets(totalTickets + 1)
+    setTotalTickets(getTotalTickets())
   }
 
   return (
