@@ -18,17 +18,17 @@ export default function CheckoutItem({imgUrl, index, price, total, type, changeT
 
     const addTicket = () => {
         ticketInfo[index].total += 1
-        console.log(ticketInfo[index].total)
         setTotal(totalTickets + 1)
         changeTotal()
+        updatePrice()
         check(index)
     }
 
     const deleteTicket = () => {
         ticketInfo[index].total -= 1
-        console.log(ticketInfo[index].total)
         setTotal(totalTickets - 1)
         changeTotal()
+        updatePrice()
         check(index)
     }
 
