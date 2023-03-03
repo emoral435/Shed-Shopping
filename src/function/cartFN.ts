@@ -10,7 +10,7 @@ function isEmpty() {
 function getTotalCost() {
     let total = 0
     for (let i = 0; i < ticketInfo.length; i++) {
-        if (ticketInfo[i].total > 0) total += ticketInfo[i].total * ticketInfo[i].price
+        total = total + ticketInfo[i].total * ticketInfo[i].price
     }
     return total.toFixed(2)
 }
@@ -18,7 +18,9 @@ function getTotalCost() {
 function getTotalTickets() {
     let total = 0
     for (let i = 0; i < ticketInfo.length; i++) {
-        if (ticketInfo[i].total > 0) total++
+        if (ticketInfo[i].total > 0) {
+            total += ticketInfo[i].total
+        }
     }
     return total
 }

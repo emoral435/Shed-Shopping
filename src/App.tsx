@@ -37,7 +37,7 @@ function App() {
       </AnimatePresence>
       <div className="w-full h-16 bg-black flex justify-center items-center gap-8 opacity-80"><div className="text-white">curated by emoral435 🌙 </div><motion.button whileHover={{rotate: 360, scale: 1.2}} transition={{duration: 1, delay: .1}}><a href="https://github.com/emoral435" target={"_blank"}><img src={gh} className="w-12 h-12"/></a></motion.button></div>
       <AnimatePresence initial={false} mode="wait">
-        {modalOpen && <Modal handleClose={close} />}
+        {modalOpen && <Modal handleClose={close} changeTotal={changeTotal}/>}
       </AnimatePresence>
     </motion.div>
   )

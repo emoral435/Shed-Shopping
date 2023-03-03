@@ -15,8 +15,7 @@ export default function CheckTicket(props: propsInterface) {
     }
 
     const addCheckout = () => {
-        ticketInfo[props.id].total = ticketInfo[props.id].total +  1
-        console.log(ticketInfo[props.id].total)
+        ticketInfo[props.id].total += 1
         props.changeTotal()
         props.checkout()
     }
@@ -36,7 +35,7 @@ export default function CheckTicket(props: propsInterface) {
                                 <div className="font-bold text-3xl">{ticketInfo[props.id].price} - taxes included</div>
                                 <div className="">
                                     <motion.button className="checkout-button" onClick={addCheckout}>
-                                        <span>Add To Cart </span>
+                                        <span>Add To Cart</span>
                                     </motion.button>
                                 </div>
                             </div>
