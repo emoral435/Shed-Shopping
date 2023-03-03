@@ -30,6 +30,7 @@ export default function CheckoutItem({imgUrl, index, price, total, type, changeT
         changeTotal()
         updatePrice()
         check(index)
+        
     }
 
 
